@@ -2,7 +2,7 @@
 # name of executable
 BINARY=./build/bin
 # libraries' directory
-CODEDIRS=./src 
+CODEDIRS=. ./src 
 # headers' directory
 INCDIRS=. ./include/ # can be list
 
@@ -26,7 +26,7 @@ all: $(BINARY)
 
 $(BINARY): $(OBJECTS)
 	$(CC) -o $@ $^
-
+	
 # only want the .cc file dependency here, thus $< instead of $^.
 #
 $(BUILDDIR)%.o:%.cc
