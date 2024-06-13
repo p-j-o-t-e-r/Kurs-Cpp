@@ -5,15 +5,29 @@
 #include<string>
 #include<vector>
 #include<fstream>
+// pytanie - gdzie lepiej dodawać headery? w .h czy w .cc
+#include"Kwadrat.h"
+#include"Prostokat.h"
+#include"Trojkat.h"
+#include"Kolo.h"
 
 using namespace std;
+
+enum choices
+{
+    STRING = 1,
+    PRZEKAZYWANIE_TABLIC,
+    IQ,
+    CINCOUTFILE,
+    METODY_ABSTRAKCYJNE,
+    END
+};
 
 class Kcpp
 {
     public:
-        Kcpp(int a);
+        Kcpp(string a, string b);
         
-        inline int getValue() { return value; }
         inline string getString1() { return string1; }
         inline string getString2() { return string2; }
         
@@ -30,12 +44,16 @@ class Kcpp
         // zadanie 3.2
         int zadIq();
 
-        //zadanie 4.2
+        // zadanie 4.2
         int zadCinCoutFile();
 
+        // zadanie 5.6
+        int zadMetodyAbstrakcyjne();
+
+        // menu do wyboru zadania
+        int menu();
 
     private:
-        int value;
         string string1, string2;
         
 };

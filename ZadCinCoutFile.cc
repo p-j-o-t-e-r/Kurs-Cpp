@@ -7,7 +7,8 @@ int main()
     char a;
     cout << "Podaj cyfrę [0-9]: ";
     cin >> a;
-    ofstream file;
+    fstream file;
+    // otwarcie pliku do zapisu
     file.open ("example.txt", ios::app);
     if (a <= '9' && a >= '0')
     {
@@ -21,5 +22,16 @@ int main()
         fprintf(stderr, "ERROR. Nie podano cyfry\n");
     }
     file.close();
+    
+    // otwarcie pliku do odczytu
+    file.open("example.txt");
+
+    string linia;
+    do
+    {
+        getline(file, linia); 
+        cout << linia << endl; 
+    }
+    while(linia != ""); 
     return 0;
 }

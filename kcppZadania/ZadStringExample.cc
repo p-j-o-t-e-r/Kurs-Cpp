@@ -32,7 +32,6 @@ int main()
     cout << "String cleared " << endl;
     printEmpty(str1);
     // 5. erase
-    // idk
     string example = "This is a string";
     cout << "String erased from: " << example << endl;
     example.erase(example.begin(), example.begin()+3);
