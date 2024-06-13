@@ -199,7 +199,12 @@ int Kcpp::menu()
         case METODY_ABSTRAKCYJNE:
             zadMetodyAbstrakcyjne();
             break;
+        case END:
+            cout << "Koniec wykonywania programu" << endl;
+            break;
         default:
+            cout << "\nZły wybór. Spróbuj ponownie. Po restarcie" << endl;   
+            choice = END; 
             break;
         }
     } while (choice != END);
